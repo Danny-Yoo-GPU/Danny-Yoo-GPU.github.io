@@ -117,6 +117,7 @@ details p{margin:0;padding:0 0 18px;color:var(--muted)}
 body{padding-bottom:72px}}
 .skip{position:absolute;left:-9999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;z-index:100;border-radius:4px}.skip:focus{left:8px}
 @media(max-width:640px){.bar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;text-align:center}.bar i{display:none}}
+.frow{display:flex;align-items:flex-start;gap:10px}.frow+.frow{margin-top:6px}.fi{flex:none;margin-top:4px;color:#ff8a91}
 footer{background:var(--bar);color:#fff;padding:36px 0 24px;text-align:center;font-size:14px}
 </style>
 </head>
@@ -178,8 +179,8 @@ footer{background:var(--bar);color:#fff;padding:36px 0 24px;text-align:center;fo
 </main>
 <footer><div class="wrap fgrid">
 <div><strong>360° Dienstleistungen</strong><br><span data-t="owner"></span><br><span data-t="fTag"></span></div>
-<div>Bornholmer Weg 5<br>24109 Kiel</div>
-<div><a href="tel:+491766432802">0176 / 6432802</a><br><a href="mailto:info@360dienstleistungen.de">info@360dienstleistungen.de</a></div>
+<div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bornholmer Weg 5<br>24109 Kiel</span></div>
+<div><div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+491766432802">0176 / 6432802</a></div><div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:info@360dienstleistungen.de">info@360dienstleistungen.de</a></div></div>
 </div><div class="wrap copy">© <span id="y"></span> 360° Dienstleistungen · <span data-t="foot"></span></div></footer>
 
 <div class="sticky"><a class="btn inv" href="tel:+491766432802" data-t="qCall"></a><a class="btn wab" href="https://wa.me/qr/XY2AAN7IMEGTN1" target="_blank" rel="noopener">WhatsApp</a></div>
@@ -200,7 +201,7 @@ function setLang(l){
  try{localStorage.setItem("lang",l)}catch(e){}
 }
 document.getElementById("y").textContent=new Date().getFullYear();
-let l="de";try{l=localStorage.getItem("lang")||((navigator.language||"").startsWith("en")?"en":"de")}catch(e){}
+let l="de";try{l=localStorage.getItem("lang")||"de"}catch(e){}
 setLang(l);
 document.documentElement.classList.add("js");
 (function(){var els=document.querySelectorAll(".rv");
