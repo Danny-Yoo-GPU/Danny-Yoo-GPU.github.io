@@ -118,7 +118,16 @@ body{padding-bottom:72px}}
 .skip{position:absolute;left:-9999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;z-index:100;border-radius:4px}.skip:focus{left:8px}
 @media(max-width:640px){.bar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;text-align:center}.bar i{display:none}}
 .frow{display:flex;align-items:flex-start;gap:10px}.frow+.frow{margin-top:6px}.fi{flex:none;margin-top:4px;color:#ff8a91}
-footer{background:var(--bar);color:#fff;padding:36px 0 24px;text-align:center;font-size:14px}
+footer{padding:48px 0 22px;text-align:left}
+.fgrid{display:grid;grid-template-columns:1.1fr 1.4fr 1.1fr;gap:36px 48px;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:32px;margin-bottom:0;line-height:1.6}
+.fcol p{margin:6px 0 0;opacity:.85}.fcol .fowner{opacity:1;font-weight:700}
+.fbrand{font-size:20px;font-weight:800}
+.fcol h4{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff8a91}
+.frow+.frow{margin-top:10px}.flist{list-style:none;margin:0;padding:0}.flist li+li{margin-top:8px}
+.flist a,.fgrid a{opacity:.92}.flist a:hover,.fgrid a:hover{opacity:1;text-decoration:underline}
+.fbot{padding-top:20px;font-size:13px;opacity:.7;text-align:left}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:28px}}
+footer{background:var(--bar);color:#fff;font-size:14px}
 </style>
 </head>
 <body>
@@ -178,10 +187,13 @@ footer{background:var(--bar);color:#fff;padding:36px 0 24px;text-align:center;fo
 </div></section>
 </main>
 <footer><div class="wrap fgrid">
-<div><strong>360° Dienstleistungen</strong><br><span data-t="owner"></span><br><span data-t="fTag"></span></div>
-<div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bornholmer Weg 5<br>24109 Kiel</span></div>
-<div><div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+491766432802">0176 / 6432802</a></div><div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:info@360dienstleistungen.de">info@360dienstleistungen.de</a></div></div>
-</div><div class="wrap copy">© <span id="y"></span> 360° Dienstleistungen · <span data-t="foot"></span></div></footer>
+<div class="fcol"><div class="fbrand">360° Dienstleistungen</div><p data-t="fTag"></p><p class="fowner" data-t="owner"></p></div>
+<div class="fcol"><h4 data-t="cTitle"></h4>
+<div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+491766432802">0176 / 6432802</a></div>
+<div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:info@360dienstleistungen.de">info@360dienstleistungen.de</a></div>
+<div class="frow"><svg class="fi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bornholmer Weg 5, 24109 Kiel</span></div></div>
+<div class="fcol"><h4 data-t="sTitle"></h4><ul class="flist"><li><a href="#services" data-t="s1"></a></li><li><a href="#services" data-t="s2"></a></li><li><a href="#services" data-t="s3"></a></li><li><a href="#services" data-t="s4"></a></li><li><a href="#services" data-t="s5"></a></li></ul></div>
+</div><div class="wrap fbot">© <span id="y"></span> 360° Dienstleistungen · <span data-t="foot"></span></div></footer>
 
 <div class="sticky"><a class="btn inv" href="tel:+491766432802" data-t="qCall"></a><a class="btn wab" href="https://wa.me/qr/XY2AAN7IMEGTN1" target="_blank" rel="noopener">WhatsApp</a></div>
 <script>
